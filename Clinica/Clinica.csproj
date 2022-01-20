@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Clinica-E59D7EB9-9CB7-47CB-A038-244B5007EB2B</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20211122145452_tabelaExameTipo.cs" />
+    <Compile Remove="Data\Migrations\20211122145452_tabelaExameTipo.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124144150_updateExameTipo.cs" />
+    <Compile Remove="Data\Migrations\20211124144150_updateExameTipo.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124144358_updateExameTipo2.cs" />
+    <Compile Remove="Data\Migrations\20211124144358_updateExameTipo2.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124145251_updateExameTipo1.cs" />
+    <Compile Remove="Data\Migrations\20211124145251_updateExameTipo1.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124164812_seedDataTiposExame.cs" />
+    <Compile Remove="Data\Migrations\20211124164812_seedDataTiposExame.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127214609_Tabelaexameagenda1.cs" />
+    <Compile Remove="Data\Migrations\20211127214609_Tabelaexameagenda1.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127214933_Tabelaexame2.cs" />
+    <Compile Remove="Data\Migrations\20211127214933_Tabelaexame2.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127215520_Tabelaexameagenda.cs" />
+    <Compile Remove="Data\Migrations\20211127215520_Tabelaexameagenda.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127220153_Tabelaexameagenda.cs" />
+    <Compile Remove="Data\Migrations\20211127220153_Tabelaexameagenda.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127220721_Tabelaexame3.cs" />
+    <Compile Remove="Data\Migrations\20211127220721_Tabelaexame3.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127221400_Tabelaexameagenda3.cs" />
+    <Compile Remove="Data\Migrations\20211127221400_Tabelaexameagenda3.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127222325_Tabelaexameagenda5.cs" />
+    <Compile Remove="Data\Migrations\20211127222325_Tabelaexameagenda5.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127222516_Tabelaexameagenda5.cs" />
+    <Compile Remove="Data\Migrations\20211127222516_Tabelaexameagenda5.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127223359_TabelaReceitas.cs" />
+    <Compile Remove="Data\Migrations\20211127223359_TabelaReceitas.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127224339_TabelaReceitas.cs" />
+    <Compile Remove="Data\Migrations\20211127224339_TabelaReceitas.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127230825_TabelaReceitas.cs" />
+    <Compile Remove="Data\Migrations\20211127230825_TabelaReceitas.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211127233533_TabelaReceitas1.cs" />
+    <Compile Remove="Data\Migrations\20211127233533_TabelaReceitas1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>
