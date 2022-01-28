@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Clinica.Models.ExameAgenda>
+﻿@model IEnumerable<Clinica.Models.Prontuario>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Solicitar Exames</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,16 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DataSolicitacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExameId)
+                @Html.DisplayNameFor(model => model.DataDisponivel)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Paciente)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
             </th>
             <th></th>
         </tr>
@@ -31,16 +31,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.DataSolicitacao)
+                @Html.DisplayFor(modelItem => item.DataDisponivel)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ExameId)
+                @Html.DisplayFor(modelItem => item.Paciente.Cpf)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Paciente.NomePaciente)
+                @Html.DisplayFor(modelItem => item.Medico.Cpf)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Medico.NomeMedico)
+                @Html.DisplayFor(modelItem => item.Descricao)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

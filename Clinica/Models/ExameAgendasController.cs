@@ -49,7 +49,7 @@ namespace Clinica.Models
         public IActionResult Create()
         {
             ViewData["MedicoId"] = new SelectList(_context.Medicos, "Id", "Cpf");
-            ViewData["PacienteId"] = new SelectList(_context.Pacientes, "Id", "Cpf");
+            ViewData["PacienteId"] = new SelectList(_context.Pacientes, "Id", "NomePaciente");
             return View();
         }
 

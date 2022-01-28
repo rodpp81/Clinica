@@ -50,7 +50,9 @@ namespace Clinica.Data
 
       
 
-        public DbSet<Clinica.Models.Exame> Exame { get; set; }
+        public DbSet<Clinica.Models.Exame> Exame { get; set; }    
+
+        public DbSet<Clinica.Models.Prontuario> Prontuario { get; set; }
 
        
     }
