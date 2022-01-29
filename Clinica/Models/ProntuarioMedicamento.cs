@@ -9,7 +9,7 @@ namespace Clinica.Models
     {
         public int Id { get; set; }
         public Prontuario Prontuario { get; set; }
-        public  Medicamento Medicamento { get; set; }
+        public Medicamento Medicamento { get; set; }
 
     }
 }

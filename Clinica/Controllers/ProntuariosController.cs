@@ -10,7 +10,7 @@ using Clinica.Models;
 
 namespace Clinica.Controllers
 {
-    public class ProntuariosController : Controller
+    public class ProntuariosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
@@ -21,7 +21,14 @@ namespace Clinica.Controllers
 
         // GET: Prontuarios
         public async Task<IActionResult> Index(int? PacienteId)
-        {   
+        {
+            var comAacesso = await Usuario_Com_Acesso(2, _context);
+
+            if (!comAacesso)
+
+            {
+                return RedirectToAction("index", "Home");
+            }
             var applicationDbContext = _context.Prontuario.Where(p=>p.Paciente.Id==PacienteId).Include(p => p.Medico).Include(p => p.Paciente);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -59,7 +66,7 @@ namespace Clinica.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DataDisponivel,PacienteId,MedicoId,Descricao,Medicamentos")] Prontuario prontuario,List<Medicamento>ListMedicamentos)
+        public async Task<IActionResult> Create([Bind("Id,DataDisponivel,PacienteId,MedicoId,Descricao")] Prontuario prontuario,List<Medicamento>ListMedicamentos)
         {
             if (ModelState.IsValid)
             {

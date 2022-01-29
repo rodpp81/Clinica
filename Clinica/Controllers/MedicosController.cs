@@ -22,7 +22,7 @@ namespace Clinica.Controllers
         // GET: Medicos
         public async Task<IActionResult> Index()
         {
-            var comAacesso = await Usuario_Com_Acesso(4, _context);
+            var comAacesso = await Usuario_Com_Acesso(2, _context);
 
             if (!comAacesso)
 

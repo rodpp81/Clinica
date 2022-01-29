@@ -10,7 +10,7 @@ namespace Clinica.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Data do Agendamento")]
+        [Display(Name = "Data do prontuario")]
         public DateTime DataDisponivel { get; set; }
 
         [Required(ErrorMessage = "O nome do usuário é obrigatório", AllowEmptyStrings = false)]
@@ -22,11 +22,11 @@ namespace Clinica.Models
         public int MedicoId { get; set; }
         public Medico Medico { get; set; }
 
-        [Required(ErrorMessage = "O nome do usuário é obrigatório", AllowEmptyStrings = false)]
+        [Required(ErrorMessage = "Preenchimento obrigatório", AllowEmptyStrings = false)]
         [Display(Name = "Anamnese")]
         public string Descricao { get; set; }
 
-        [Required(ErrorMessage = "O nome do usuário é obrigatório", AllowEmptyStrings = false)]
+     
         [Display(Name = "Medicamento")]
         public List<ProntuarioMedicamento> Medicamentos { get; set; }
 
