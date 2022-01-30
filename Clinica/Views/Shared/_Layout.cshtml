@@ -28,20 +28,41 @@
                         </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Especialidades" asp-action="Index">Especialidades</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Médicos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Prontuarios" asp-action="Index">Cadastrar Prontuários</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Exames" asp-action="Index">Pedido de exames</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Receitas" asp-action="Index">Gerar Receitas</a>
+                                   
+                                </div>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Medicos" asp-action="Index">Medicos</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Cadastros
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="Index">Pacientes</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Medicos" asp-action="Index">Médicos</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Especialidades" asp-action="Index">Especialidades Médicas</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Index">Medicamentos</a>
+                                    
+                                </div>
                             </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                         Gestão de usuários
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="TipoUsuarios" asp-action="Index">Tipos de usuários</a>
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="PerfilUsuarios" asp-action="Index">Perfil de usuários</a>
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="AcessoTipoUsuarios" asp-action="Index">Tipos de acessos</a>
+                                         </div>
+                                    </li>
                         }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Sobre Nós</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Nossas Especialidades</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
