@@ -8,8 +8,10 @@ namespace Clinica.Models
     public class Exame
     {
         public int Id { get; set; }
-        public DateTime DataSolicitacao{ get; set; } 
 
+        public DateTime DataSolicitacao{ get; set; }
+
+        public byte resultExame { get; set; }
 
         public int TipoExameId { get; set; }
         public ExameTipo ExameTipo { get; set; }
@@ -19,5 +21,6 @@ namespace Clinica.Models
 
         public int MedicoId { get; set; }
         public Medico Medico { get; set; }
+               
     }
 }
